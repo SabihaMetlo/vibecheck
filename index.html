@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeCheck - AI Code Security Reviewer</title>
+    <meta name="description" content="A security reviewer for AI-generated code.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    <div class="container">
+        <header>
+            <h1>VibeCheck</h1>
+            <p>Security scanner for "vibe-coded" AI generations</p>
+        </header>
+        <main>
+            <div class="editor-container">
+                <div class="editor-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <textarea id="code-input" placeholder="Paste your AI-generated code here..."
+                    spellcheck="false"></textarea>
+            </div>
+            <div class="action-container" style="display: flex; justify-content: center; margin-top: -1rem;">
+                <button id="scan-btn" class="scan-btn">
+                    <span class="btn-text">Scan Code</span>
+                    <div class="spinner hidden" id="scan-spinner"></div>
+                </button>
+            </div>
+            <div id="results-container" class="results-container hidden">
+                <div id="summary-card" class="summary-card">
+                    <!-- Summary injected here -->
+                </div>
+                <div id="findings-list" class="findings-list">
+                    <!-- Findings injected here -->
+                </div>
+                <div style="text-align:center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+                    <button id="reset-btn"
+                        style="display:none; background:transparent; border: 2px solid #a78bfa; color:#a78bfa; padding: 0.6rem 1.8rem; border-radius: 999px; font-size: 1rem; cursor:pointer;">
+                        &#x21BA; Scan New Code
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
