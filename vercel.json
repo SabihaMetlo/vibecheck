@@ -6,7 +6,15 @@
       "use": "@vercel/python"
     },
     {
-      "src": "index.html",
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.js",
       "use": "@vercel/static"
     }
   ],
@@ -14,6 +22,18 @@
     {
       "src": "/api/scan",
       "dest": "api/scan.py"
+    },
+    {
+      "src": "/index.css",
+      "dest": "/index.css"
+    },
+    {
+      "src": "/app.js",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
     },
     {
       "src": "/(.*)",
