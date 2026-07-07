@@ -1,0 +1,7 @@
+[build]
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/scan"
+  to = "/.netlify/functions/scan_netlify"
+  status = 200
