@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resetBtn.style.display = 'none';
 
         try {
-            const response = await fetch('https://vibecheck-sabiha.vercel.app/api/scan', {
+            const response = await fetch('/api/scan', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
